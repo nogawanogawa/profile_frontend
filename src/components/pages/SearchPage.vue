@@ -12,13 +12,13 @@
             </v-layout>
 
             <v-layout>
-              <v-flex xs4>
+              <v-flex xs12 md4>
                 <ConnpassPanel/>
               </v-flex>
-              <v-flex xs4>
+              <v-flex xs12 md4>
                 <HatenaPanel/>
               </v-flex>
-              <v-flex xs4>
+              <v-flex xs12 md4>
                 <TwitterPanel/>
               </v-flex>
             </v-layout>
