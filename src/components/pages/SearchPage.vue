@@ -5,23 +5,23 @@
       <v-container fluid fill-height>
         <v-layout justify-center>
           <v-container fluid grid-list-lg pa-2>
-            <v-layout>
-              <v-flex xs12>
+            <v-row>
+              <v-col xs="12">
                 <GithubPanel/>
-              </v-flex>
-            </v-layout>
+              </v-col>
+            </v-row>
 
-            <v-layout>
-              <v-flex xs12 md4>
+            <v-row>
+              <v-col cols="12" xs="12" sm="6" md="4">
                 <ConnpassPanel/>
-              </v-flex>
-              <v-flex xs12 md4>
+              </v-col>
+              <v-col cols="12" xs="12" sm="6" md="4">
                 <HatenaPanel/>
-              </v-flex>
-              <v-flex xs12 md4>
+              </v-col>
+              <v-col cols="12" xs="12" sm="6" md="4">
                 <TwitterPanel/>
-              </v-flex>
-            </v-layout>
+              </v-col>
+            </v-row>
           </v-container>
         </v-layout>
       </v-container>

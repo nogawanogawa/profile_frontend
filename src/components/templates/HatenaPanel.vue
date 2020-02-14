@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="pa-2">
     <v-card-title class="title">Tech Blog</v-card-title>
     <v-container>
       <v-card class="blog" color="deep-purple darken-3" dark v-for="item in items" :key="item">

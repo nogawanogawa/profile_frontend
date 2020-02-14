@@ -1,11 +1,9 @@
 <template>
-  <v-card class="mx-auto">
+  <v-card class="pa-2">
     <v-card-title>
       <v-icon large left color="#26c6da">mdi-twitter</v-icon>
     </v-card-title>
-    <v-flex xs12>
-      <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '3' }"/>
-    </v-flex>
+    <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '3' }"/>
   </v-card>
 </template>
 

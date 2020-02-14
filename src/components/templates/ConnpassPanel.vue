@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto">
+  <v-card class="pa-2">
     <v-card-title class="title">Meetup Timeline</v-card-title>
     <v-layout>
       <v-timeline :align-top="alignTop" :dense="dense" :reverse="reverse">
