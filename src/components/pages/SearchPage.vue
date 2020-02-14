@@ -10,7 +10,6 @@
                 <GithubPanel/>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col cols="12" xs="12" sm="6" md="4">
                 <ConnpassPanel/>
