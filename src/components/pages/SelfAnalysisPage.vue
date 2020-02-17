@@ -5,11 +5,11 @@
       <v-container fluid fill-height>
         <v-layout justify-center>
           <v-container fluid grid-list-lg pa-2>
-            <v-layout>
-              <v-flex xs12>
+            <v-row>
+              <v-col cols="12" xs="12" sm="6" md="6">
                 <RegisterPanel/>
-              </v-flex>
-            </v-layout>
+              </v-col>
+            </v-row>
           </v-container>
         </v-layout>
       </v-container>
@@ -31,7 +31,7 @@ export default {
     source: String
   },
   created() {
-    this.$vuetify.theme.dark = true;
+    this.$vuetify.theme.dark = false;
   }
 };
 </script>

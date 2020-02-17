@@ -1,35 +1,86 @@
 <template>
-  <v-card xs12 color="grey darken-2">
-    <v-card-title>Register</v-card-title>
-    <v-spacer></v-spacer>
-    <RegisterForm/>
+  <v-card>
+    <v-card-title class="title">WordCloud</v-card-title>
+    <div id="app">
+      <wordcloud :data="words" nameKey="name" valueKey="value" color="Accent"></wordcloud>
+    </div>
   </v-card>
 </template>
 
 <script>
-import RegisterForm from "@/components/organisms/RegisterForm.vue";
+import wordcloud from "vue-wordcloud";
+import axios from "axios";
+import config from "@/config/params.js";
 
 export default {
-  name: "RegisterPanel",
+  name: "app",
   components: {
-    RegisterForm
+    wordcloud
   },
-  data: () => ({
-    flat: false,
-    media: true,
-    loading: false,
-    actions: true,
-    outlined: false,
-    elevation: undefined,
-    raised: false,
-    width: 344,
-    height: undefined
-  })
+  data() {
+    return {
+      endpoint: config.route + "twitter_word_cloud",
+      words: [
+        {
+          name: "猫",
+          value: 26
+        },
+        {
+          name: "猫",
+          value: 26
+        },
+        {
+          name: "猫",
+          value: 26
+        },
+        {
+          name: "猫",
+          value: 26
+        },
+        {
+          name: "猫",
+          value: 26
+        },
+        {
+          name: "魚",
+          value: 19
+        },
+        {
+          name: "things",
+          value: 18
+        },
+        {
+          name: "look",
+          value: 16
+        },
+        {
+          name: "two",
+          value: 15
+        },
+        {
+          name: "fun",
+          value: 9
+        },
+        {
+          name: "know",
+          value: 9
+        },
+        {
+          name: "good",
+          value: 9
+        },
+        {
+          name: "play",
+          value: 6
+        }
+      ]
+    };
+  },
+  methods: {},
+  mounted: function() {
+    axios
+      .get(this.endpoint)
+      .then(response => (this.words = response.data.words));
+  }
 };
 </script>
-
-<style scoped>
-.v-input__slider {
-  width: 100%;
-}
-</style>

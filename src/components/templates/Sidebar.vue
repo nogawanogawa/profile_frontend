@@ -15,6 +15,14 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item @click="self_analysis()" class="white--text">
+          <v-list-item-action>
+            <v-icon>bar_chart</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>SelfAnalysis</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -31,8 +39,8 @@ export default {
     click_1() {
       this.$router.push({ path: "/Search" });
     },
-    click_2() {
-      this.$router.push({ path: "/Register" });
+    self_analysis() {
+      this.$router.push({ path: "/SelfAnalysis" });
     }
   }
 };

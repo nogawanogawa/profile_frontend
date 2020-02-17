@@ -1,4 +1,4 @@
-import RegisterPage from "@/components/pages/RegisterPage.vue"
+import SelfAnalysisPage from "@/components/pages/SelfAnalysisPage.vue"
 import SearchPage from "@/components/pages/SearchPage.vue"
 import DetailPage from "@/components/pages/DetailPage.vue"
 import UpdatePage from "@/components/pages/UpdatePage.vue"
@@ -11,8 +11,8 @@ export default [{
     path: '/Home',
     component: SearchPage
 }, {
-    path: '/Register',
-    component: RegisterPage
+    path: '/SelfAnalysis',
+    component: SelfAnalysisPage
 }, {
     path: '/Detail',
     component: DetailPage
