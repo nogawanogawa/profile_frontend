@@ -2,7 +2,8 @@
   <v-card class="pa-2">
     <v-card-title class="title">Meetup Timeline</v-card-title>
     <v-layout>
-      <v-timeline :align-top="alignTop" :dense="dense" :reverse="reverse">
+      <v-card-text :align="`center`" v-if="items.length == 0">No plan</v-card-text>
+      <v-timeline :align-top="alignTop" :dense="dense" :reverse="reverse" v-if="items.length != 0">
         <v-timeline-item
           v-for="item in items"
           :key="item"
