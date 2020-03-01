@@ -20,7 +20,12 @@
             </v-avatar>
           </template>
           <v-flex xs11>
-            <v-card color="blue darken-4" dark class="elevation-2">
+            <v-card
+              color="blue darken-4"
+              dark
+              class="elevation-2"
+              v-on:click="window_open(item.event_url)"
+            >
               <v-card-title class="title">{{item.title}}</v-card-title>
               <v-card-text>{{item.started_at}}</v-card-text>
               <v-card-text>{{item.catch}}</v-card-text>
@@ -53,6 +58,7 @@ export default {
     right: true,
     small: false,
     items: [],
+    today: new Date(),
     test: "",
     connpass_url: config.connpass_url,
     endpoint: config.route
@@ -68,8 +74,14 @@ export default {
               return -1;
             }
           })
-          .slice(0, 4))
+          .filter(x => x.started_at > this.today.toISOString())
+          .slice(0, 5))
     );
+  },
+  methods: {
+    window_open: function(url) {
+      window.open(url);
+    }
   }
 };
 </script>
