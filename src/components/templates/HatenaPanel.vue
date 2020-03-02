@@ -2,7 +2,14 @@
   <v-card class="pa-2">
     <v-card-title class="title">Tech Blog</v-card-title>
     <v-container>
-      <v-card class="blog" color="deep-purple darken-3" dark v-for="item in items" :key="item">
+      <v-card
+        class="blog"
+        color="deep-purple darken-3"
+        dark
+        v-for="item in items"
+        :key="item"
+        v-on:click="window_open(item.link)"
+      >
         <v-card-title class="headline">{{item.title}}</v-card-title>
         <v-card-text>{{item.contents}}</v-card-text>
         <v-card-text>{{item.published}}</v-card-text>
@@ -37,6 +44,11 @@ export default {
           })
           .slice(0, 4))
     );
+  },
+  methods: {
+    window_open: function(url) {
+      window.open(url);
+    }
   }
 };
 </script>
