@@ -22,9 +22,5 @@ yarn-error.log*
 
 # user info
 */config.js
-.firebaserc
-firebase.json
-.firebase
-src/plugins/firebase.js
 package-lock.json
 src/config/*
