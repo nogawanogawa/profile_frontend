@@ -4,50 +4,25 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [13.x]
 
     steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@master
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        cd ./functions
-        git clone https://nogawanogawa:$GIT_PASS@github.com/nogawanogawa/profile_frontend
-        cd yyyyy
-        npm install
-        npm run build
-      env:
-        GIT_PASS: ${{ secrets.GIT_PASS }}
-	
-  deploy:
-  
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, generate
-      run: |
-           npm install
-           npm run generate --if-present
-    - name: deploy to Firebase Hosting
-      uses: w9jds/firebase-action@master
-      with:
-        args: deploy
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, generate
+        run: |
+          npm install
+          npm run build
+      - name: deploy to Firebase Hosting
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
