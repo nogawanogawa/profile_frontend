@@ -1,5 +1,5 @@
+import HomePage from "@/components/pages/HomePage.vue"
 import SelfAnalysisPage from "@/components/pages/SelfAnalysisPage.vue"
-import SearchPage from "@/components/pages/SearchPage.vue"
 import DetailPage from "@/components/pages/DetailPage.vue"
 import UpdatePage from "@/components/pages/UpdatePage.vue"
 import DeletePage from "@/components/pages/DeletePage.vue"
@@ -9,7 +9,7 @@ export default [{
     redirect: 'Home'
 }, {
     path: '/Home',
-    component: SearchPage
+    component: HomePage
 }, {
     path: '/SelfAnalysis',
     component: SelfAnalysisPage

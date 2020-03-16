@@ -13,7 +13,7 @@ import axios from "axios";
 import config from "@/config/params.js";
 
 export default {
-  name: "app",
+  name: "WordCloud",
   components: {
     wordcloud
   },

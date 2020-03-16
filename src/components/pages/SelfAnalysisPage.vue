@@ -7,7 +7,10 @@
           <v-container fluid grid-list-lg pa-2>
             <v-row>
               <v-col cols="12" xs="12" sm="6" md="6">
-                <RegisterPanel/>
+                <WordCloudPanel/>
+              </v-col>
+              <v-col cols="12" xs="12" sm="6" md="6">
+                <TwitterPanel/>
               </v-col>
             </v-row>
           </v-container>
@@ -19,13 +22,15 @@
 
 <script>
 import Sidebar from "@/components/templates/Sidebar.vue";
-import RegisterPanel from "@/components/templates/RegisterPanel.vue";
+import WordCloudPanel from "@/components/templates/WordCloudPanel.vue";
+import TwitterPanel from "@/components/templates/TwitterPanel.vue";
 
 export default {
   name: "RegisterPage",
   components: {
     Sidebar,
-    RegisterPanel
+    WordCloudPanel,
+    TwitterPanel
   },
   props: {
     source: String

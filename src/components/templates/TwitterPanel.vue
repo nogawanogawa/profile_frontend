@@ -3,7 +3,7 @@
     <v-card-title>
       <v-icon large left color="#26c6da">mdi-twitter</v-icon>
     </v-card-title>
-    <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '3' }"/>
+    <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '5' }"/>
   </v-card>
 </template>
 
