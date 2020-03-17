@@ -7,7 +7,7 @@
 
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-list dense>
-        <v-list-item @click="click_1()" class="white--text">
+        <v-list-item @click="home()" class="white--text">
           <v-list-item-action>
             <v-icon>home</v-icon>
           </v-list-item-action>
@@ -15,12 +15,21 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item @click="self_analysis()" class="white--text">
+
+        <v-list-item @click="twitter_analysis()" class="white--text">
           <v-list-item-action>
-            <v-icon>bar_chart</v-icon>
+            <v-icon>mdi-twitter</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>SelfAnalysis</v-list-item-title>
+            <v-list-item-title>Twitter</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="blog_analysis()" class="white--text">
+          <v-list-item-action>
+            <v-icon>menu_book</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Blog</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -36,11 +45,14 @@ export default {
     drawer: null
   }),
   methods: {
-    click_1() {
+    home() {
       this.$router.push({ path: "/Search" });
     },
-    self_analysis() {
-      this.$router.push({ path: "/SelfAnalysis" });
+    twitter_analysis() {
+      this.$router.push({ path: "/TwitterAnalysis" });
+    },
+    blog_analysis() {
+      this.$router.push({ path: "/BlogAnalysis" });
     }
   }
 };

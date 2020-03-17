@@ -1,6 +1,9 @@
 <template>
   <v-card class="pa-2">
-    <v-card-title class="title">Meetup Timeline</v-card-title>
+    <v-card-title class="title">
+      <v-icon>mdi-ticket-account</v-icon>
+      <div class="cardtitle">Meetup Timeline</div>
+    </v-card-title>
     <v-layout>
       <v-card-text :align="`center`" v-if="items.length == 0">No plan</v-card-text>
       <v-timeline :align-top="alignTop" :dense="dense" :reverse="reverse" v-if="items.length != 0">
@@ -21,12 +24,7 @@
             </v-avatar>
           </template>
           <v-flex xs11>
-            <v-card
-              color="blue darken-4"
-              dark
-              class="elevation-2"
-              v-on:click="window_open(item.event_url)"
-            >
+            <v-card color="primary" dark flat hover v-on:click="window_open(item.event_url)">
               <v-card-title class="title">{{item.title}}</v-card-title>
               <v-card-text>{{item.started_at}}</v-card-text>
               <v-card-text>{{item.catch}}</v-card-text>
@@ -86,3 +84,8 @@ export default {
   }
 };
 </script>
+<style>
+.cardtitle {
+  margin-left: 10px;
+}
+</style>

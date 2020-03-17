@@ -1,17 +1,13 @@
 <template>
   <v-card class="pa-2">
-    <v-card-title class="title" color="grey darken-2">
-      <v-icon>menu_book</v-icon>
-      <div class="cardtitle">Tech Blog</div>
-    </v-card-title>
+    <v-card-title class="headline">Re:ゼロから始めるML生活</v-card-title>
     <v-container>
       <v-card
         class="blog"
+        outlined
+        hover
         v-for="item in items"
         :key="item"
-        outlined
-        flat
-        hover
         v-on:click="window_open(item.link)"
       >
         <v-card-title class="headline">{{item.title}}</v-card-title>
@@ -60,8 +56,5 @@ export default {
 <style scoped>
 .blog {
   margin-top: 10px;
-}
-.cardtitle {
-  margin-left: 10px;
 }
 </style>

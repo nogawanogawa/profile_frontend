@@ -1,6 +1,6 @@
 import HomePage from "@/components/pages/HomePage.vue"
-import SelfAnalysisPage from "@/components/pages/SelfAnalysisPage.vue"
-import DetailPage from "@/components/pages/DetailPage.vue"
+import TwitterAnalysisPage from "@/components/pages/TwitterAnalysisPage.vue"
+import BlogAnalysisPage from "@/components/pages/BlogAnalysisPage.vue"
 import UpdatePage from "@/components/pages/UpdatePage.vue"
 import DeletePage from "@/components/pages/DeletePage.vue"
 
@@ -11,11 +11,11 @@ export default [{
     path: '/Home',
     component: HomePage
 }, {
-    path: '/SelfAnalysis',
-    component: SelfAnalysisPage
+    path: '/TwitterAnalysis',
+    component: TwitterAnalysisPage
 }, {
-    path: '/Detail',
-    component: DetailPage
+    path: '/BlogAnalysis',
+    component: BlogAnalysisPage
 }, {
     path: '/Update',
     component: UpdatePage
