@@ -33,7 +33,7 @@ export default {
   data: () => ({
     items: [],
     endpoint: config.route + "hatena",
-    blog_url: config.hatena_url
+    blog_url: config.hatena_work_url
   }),
   mounted: function() {
     axios.get(this.endpoint).then(

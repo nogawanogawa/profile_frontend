@@ -1,6 +1,9 @@
 <template>
   <v-card class="pa-2">
-    <v-card-title class="headline">どこにでもいるSEの備忘録</v-card-title>
+    <v-card-title class="title">
+      <v-icon>developer_board</v-icon>
+      <div class="cardtitle">どこにでもいるSEの備忘録</div>
+    </v-card-title>
     <v-container>
       <v-card
         class="blog"
@@ -29,7 +32,7 @@ import config from "@/config/params.js";
 export default {
   data: () => ({
     items: [],
-    endpoint: config.route + "hatena",
+    endpoint: config.route + "hatena_work",
     blog_url: config.hatena_url
   }),
   mounted: function() {
@@ -57,5 +60,8 @@ export default {
 <style scoped>
 .blog {
   margin-top: 10px;
+}
+.cardtitle {
+  margin-left: 10px;
 }
 </style>

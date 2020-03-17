@@ -1,6 +1,9 @@
 <template>
   <v-card class="pa-2">
-    <v-card-title class="headline">Re:ゼロから始めるML生活</v-card-title>
+    <v-card-title class="title">
+      <v-icon>mdi-chart-bar</v-icon>
+      <div class="cardtitle">ゼロから始めるML生活</div>
+    </v-card-title>
     <v-container>
       <v-card
         class="blog"
@@ -28,8 +31,8 @@ import config from "@/config/params.js";
 export default {
   data: () => ({
     items: [],
-    endpoint: config.route + "hatena",
-    blog_url: config.hatena_url
+    endpoint: config.route + "hatena_com",
+    blog_url: config.hatena_com_url
   }),
   mounted: function() {
     axios.get(this.endpoint).then(
@@ -56,5 +59,8 @@ export default {
 <style scoped>
 .blog {
   margin-top: 10px;
+}
+.cardtitle {
+  margin-left: 10px;
 }
 </style>
