@@ -5,7 +5,7 @@
       <v-container fluid fill-height>
         <v-layout justify-center>
           <v-flex xs12>
-            <DeletePanel/>
+            <CareerPanel/>
           </v-flex>
         </v-layout>
       </v-container>
@@ -15,19 +15,16 @@
 
 <script>
 import Sidebar from "@/components/templates/Sidebar.vue";
-import DeletePanel from "@/components/templates/DeletePanel.vue";
+import CareerPanel from "@/components/templates/CareerPanel.vue";
 
 export default {
-  name: "SearchPage",
+  name: "CareerPage",
   components: {
     Sidebar,
-    DeletePanel
+    CareerPanel
   },
   props: {
     source: String
-  },
-  created() {
-    this.$vuetify.theme.dark = true;
   }
 };
 </script>

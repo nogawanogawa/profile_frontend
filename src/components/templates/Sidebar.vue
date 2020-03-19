@@ -15,7 +15,14 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-
+        <v-list-item @click="carrer()" class="white--text">
+          <v-list-item-action>
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Career</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item @click="twitter_analysis()" class="white--text">
           <v-list-item-action>
             <v-icon>mdi-twitter</v-icon>
@@ -47,6 +54,9 @@ export default {
   methods: {
     home() {
       this.$router.push({ path: "/Search" });
+    },
+    carrer() {
+      this.$router.push({ path: "/Career" });
     },
     twitter_analysis() {
       this.$router.push({ path: "/TwitterAnalysis" });

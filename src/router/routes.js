@@ -1,8 +1,7 @@
 import HomePage from "@/components/pages/HomePage.vue"
 import TwitterAnalysisPage from "@/components/pages/TwitterAnalysisPage.vue"
 import BlogAnalysisPage from "@/components/pages/BlogAnalysisPage.vue"
-import UpdatePage from "@/components/pages/UpdatePage.vue"
-import DeletePage from "@/components/pages/DeletePage.vue"
+import CareerPage from "@/components/pages/CareerPage.vue"
 
 export default [{
     path: '/',
@@ -17,11 +16,8 @@ export default [{
     path: '/BlogAnalysis',
     component: BlogAnalysisPage
 }, {
-    path: '/Update',
-    component: UpdatePage
-}, {
-    path: '/Delete',
-    component: DeletePage
+    path: '/Career',
+    component: CareerPage
 }, {
     path: '*',
     redirect: '/'
