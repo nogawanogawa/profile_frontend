@@ -3,6 +3,8 @@
     <v-app-bar app dark color="indigo darken-4" clipped-left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="headline">nogawanogawa</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-icon @click="contact()">message</v-icon>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app clipped>
@@ -46,12 +48,17 @@
 
 
 <script>
+import config from "@/config/params.js";
+
 export default {
   name: "Sidebar",
   data: () => ({
     drawer: null
   }),
   methods: {
+    contact() {
+      window.open(config.contact_url);
+    },
     home() {
       this.$router.push({ path: "/Search" });
     },
