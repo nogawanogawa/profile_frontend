@@ -20,6 +20,7 @@
   </v-app>
 </template>
 
+
 <script>
 import Sidebar from "@/components/templates/Sidebar.vue";
 import SystemBlogPanel from "@/components/templates/SystemBlogPanel.vue";

@@ -1,6 +1,9 @@
 <template>
   <v-card>
-    <v-card-title class="title">Github Contribution</v-card-title>
+    <v-card-title class="title">
+      <v-icon large left>mdi-github</v-icon>
+      <div class="cardtitle">Github Contribution</div>
+    </v-card-title>
     <div class="github">
       <img :src="github_grass_url">
     </div>
