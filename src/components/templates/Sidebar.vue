@@ -3,11 +3,34 @@
     <v-app-bar app dark color="indigo darken-4" clipped-left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="headline">nogawanogawa</v-toolbar-title>
+
       <v-spacer></v-spacer>
-      <v-icon @click="contact()">message</v-icon>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon @click="github()">mdi-github-circle</v-icon>
+          </v-btn>
+        </template>
+        <span>Repository of this page</span>
+      </v-tooltip>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon @click="contact()">mdi-message-text</v-icon>
+          </v-btn>
+        </template>
+        <span>Contact</span>
+      </v-tooltip>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app clipped>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="title">Manu</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
       <v-list dense>
         <v-list-item @click="home()" class="white--text">
           <v-list-item-action>
@@ -58,6 +81,9 @@ export default {
   methods: {
     contact() {
       window.open(config.contact_url);
+    },
+    github() {
+      window.open(config.this_repository_url);
     },
     home() {
       this.$router.push({ path: "/Search" });
