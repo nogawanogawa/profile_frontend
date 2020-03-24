@@ -1,5 +1,5 @@
 <template>
-  <v-card xs12 outlined class="card">
+  <v-card xs12 class="card">
     <v-card-title>Word Count</v-card-title>
     <BarChart/>
   </v-card>
