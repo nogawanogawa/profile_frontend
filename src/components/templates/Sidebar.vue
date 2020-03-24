@@ -26,7 +26,7 @@
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title">Manu</v-list-item-title>
+          <v-list-item-title class="title">Menu</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
