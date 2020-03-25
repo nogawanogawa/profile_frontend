@@ -35,6 +35,7 @@ export default {
     endpoint: config.route + "hatena_work",
     blog_url: config.hatena_work_url
   }),
+  components: {},
   mounted: function() {
     axios.get(this.endpoint).then(
       response =>

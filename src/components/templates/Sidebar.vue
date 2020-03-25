@@ -56,14 +56,23 @@
             <v-list-item-title>Twitter</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item @click="blog_analysis()" class="white--text">
-          <v-list-item-action>
-            <v-icon>menu_book</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
+        <v-list-group prepend-icon="menu_book" no-action>
+          <template v-slot:activator>
             <v-list-item-title>Blog</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+          </template>
+          <v-list-item @click="blog_analysis()" class="white--text">
+            <v-list-item-content>
+              <v-list-item-title>どこにでもいるSEの備忘録</v-list-item-title>
+              <v-list-item-subtitle>システム開発ブログ</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item @click="machinelearning_blog_analysis()" class="white--text">
+            <v-list-item-content>
+              <v-list-item-title>Re:ゼロから始めるML生活</v-list-item-title>
+              <v-list-item-subtitle>機械学習ブログ</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -96,7 +105,16 @@ export default {
     },
     blog_analysis() {
       this.$router.push({ path: "/BlogAnalysis" });
+    },
+    machinelearning_blog_analysis() {
+      this.$router.push({ path: "/MachineLearningBlogAnalysis" });
     }
   }
 };
 </script>
+<style scoped>
+.title {
+  margin-left: 20px;
+}
+</style>
+

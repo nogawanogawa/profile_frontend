@@ -9,8 +9,9 @@
               <v-col cols="12" xs="12" sm="6" md="8">
                 <WordCloudPanel/>
               </v-col>
+
               <v-col cols="12" xs="12" sm="6" md="4">
-                <SystemBlogPanel/>
+                <MachineLearningBlogPanel/>
               </v-col>
             </v-row>
           </v-container>
@@ -23,14 +24,14 @@
 
 <script>
 import Sidebar from "@/components/templates/Sidebar.vue";
-import SystemBlogPanel from "@/components/templates/SystemBlogPanel.vue";
+import MachineLearningBlogPanel from "@/components/templates/MachineLearningBlogPanel.vue";
 import WordCloudPanel from "@/components/templates/WordCloudPanel.vue";
 
 export default {
   name: "RegisterPage",
   components: {
     Sidebar,
-    SystemBlogPanel,
+    MachineLearningBlogPanel,
     WordCloudPanel
   },
   props: {
