@@ -7,7 +7,7 @@
           <v-container fluid grid-list-lg pa-2>
             <v-row>
               <v-col cols="12" xs="12" sm="6" md="8">
-                <WordCloudPanel/>
+                <WordCloudPanel v-bind:suffix="endpoint"/>
               </v-col>
 
               <v-col cols="12" xs="12" sm="6" md="4">
@@ -34,11 +34,11 @@ export default {
     MachineLearningBlogPanel,
     WordCloudPanel
   },
+  data: () => ({
+    endpoint: "twitter_word_cloud"
+  }),
   props: {
     source: String
-  },
-  created() {
-    this.$vuetify.theme.dark = false;
   }
 };
 </script>
