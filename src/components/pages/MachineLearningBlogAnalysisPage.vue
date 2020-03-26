@@ -35,7 +35,7 @@ export default {
     WordCloudPanel
   },
   data: () => ({
-    endpoint: "twitter_word_cloud"
+    endpoint: "hatena_com_word_cloud"
   }),
   props: {
     source: String
