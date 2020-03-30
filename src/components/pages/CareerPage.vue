@@ -4,17 +4,19 @@
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center>
-          <v-flex xs6>
-            <v-card-title>
-              <v-icon>work</v-icon>
-              <div class="cardtitle">Career</div>
-            </v-card-title>
-            <CareerPanel/>
-          </v-flex>
-          <v-flex xs6>
-            <SkillPanel/>
-            <PortfolioPanel/>
-          </v-flex>
+          <v-row>
+            <v-col cols="12" xs="12" sm="6" md="6">
+              <v-card-title>
+                <v-icon>work</v-icon>
+                <div class="cardtitle">Career</div>
+              </v-card-title>
+              <CareerPanel/>
+            </v-col>
+            <v-col cols="12" xs="12" sm="6" md="6">
+              <SkillPanel/>
+              <PortfolioPanel/>
+            </v-col>
+          </v-row>
         </v-layout>
       </v-container>
     </v-content>
