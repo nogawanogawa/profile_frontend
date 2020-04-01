@@ -23,5 +23,5 @@ yarn-error.log*
 # user info
 */config.js
 package-lock.json
-src/config/*
+frontend/src/config/*
 .firebase
