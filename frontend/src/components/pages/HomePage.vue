@@ -1,44 +1,31 @@
 <template>
-  <v-app id="inspire">
-    <Sidebar/>
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center>
-          <v-container fluid grid-list-lg pa-2>
-            <v-row>
-              <v-col xs="12">
-                <GithubPanel/>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="12" xs="12" sm="6" md="4">
-                <ConnpassPanel/>
-              </v-col>
-              <v-col cols="12" xs="12" sm="6" md="4">
-                <HatenaPanel/>
-              </v-col>
-              <v-col cols="12" xs="12" sm="6" md="4">
-                <TwitterPanel/>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
+  <HomeLayout>
+    <template v-slot:github>
+      <GithubPanel/>
+    </template>
+    <template v-slot:connpass>
+      <ConnpassPanel/>
+    </template>
+    <template v-slot:hatena>
+      <HatenaPanel/>
+    </template>
+    <template v-slot:twitter>
+      <TwitterPanel/>
+    </template>
+  </HomeLayout>
 </template>
 
 <script>
-import Sidebar from "@/components/templates/Sidebar.vue";
-import TwitterPanel from "@/components/templates/TwitterPanel.vue";
-import ConnpassPanel from "@/components/templates/ConnpassPanel.vue";
-import GithubPanel from "@/components/templates/GithubPanel.vue";
-import HatenaPanel from "@/components/templates/HatenaPanel.vue";
+import HomeLayout from "@/components/templates/HomeLayout.vue";
+import TwitterPanel from "@/components/organisms/TwitterPanel.vue";
+import ConnpassPanel from "@/components/organisms/ConnpassPanel.vue";
+import GithubPanel from "@/components/organisms/GithubPanel.vue";
+import HatenaPanel from "@/components/organisms/HatenaPanel.vue";
 
 export default {
-  name: "SearchPage",
+  name: "Home",
   components: {
-    Sidebar,
+    HomeLayout,
     TwitterPanel,
     ConnpassPanel,
     GithubPanel,
