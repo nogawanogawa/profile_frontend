@@ -2,7 +2,7 @@
   <SnsLayout>
     <template v-slot:stats>
       <WordCloudPanel v-bind:suffix="'twitter_word_cloud'"/>
-      <BarChartPanel/>
+      <BarChartPanel v-bind:suffix="'twitter_word_cloud'"/>
     </template>
     <template v-slot:original>
       <TwitterPanel/>

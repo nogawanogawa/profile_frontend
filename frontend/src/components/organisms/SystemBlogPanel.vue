@@ -2,7 +2,7 @@
   <v-card class="pa-2">
     <v-card-title class="title">
       <v-icon>developer_board</v-icon>
-      <div class="cardtitle">どこにでもいるSEの備忘録</div>
+      <div class="cardtitle">最近の投稿</div>
     </v-card-title>
     <v-container>
       <v-card

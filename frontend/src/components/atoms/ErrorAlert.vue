@@ -1,13 +1,6 @@
 <template>
   <div>
-    <v-alert
-      v-model="display"
-      border="left"
-      close-text="Close Alert"
-      color="error"
-      dark
-      dismissible
-    >{{text}}</v-alert>
+    <v-alert type="error">I'm an error alert.</v-alert>
   </div>
 </template>
 
@@ -17,9 +10,6 @@ export default {
   data() {
     return {};
   },
-  props: {
-    display: Boolean,
-    text: String
-  }
+  props: {}
 };
 </script>

@@ -2,7 +2,7 @@
   <v-card class="pa-2">
     <v-card-title class="title">
       <v-icon>mdi-chart-bar</v-icon>
-      <div class="cardtitle">Re:ゼロから始めるML生活</div>
+      <div class="cardtitle">最近の投稿</div>
     </v-card-title>
     <v-container>
       <v-card

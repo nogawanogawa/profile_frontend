@@ -1,6 +1,9 @@
 <template>
   <v-card xs12 class="card">
-    <v-card-title>Word Count</v-card-title>
+    <v-card-title class="title">
+      <v-icon>bar_chart</v-icon>
+      <div class="cardtitle">Hot Entry</div>
+    </v-card-title>
     <BarChart v-if="loaded" :chartdata="chartdata"/>
   </v-card>
 </template>
@@ -11,7 +14,6 @@ import config from "@/config/params.js";
 import axios from "axios";
 
 export default {
-  name: "BarChartPanel",
   components: {
     BarChart
   },
@@ -24,29 +26,27 @@ export default {
         labels: [],
         datasets: [
           {
-            label: "tweet words",
+            label: "Access",
             data: [],
-            borderWidth: 1,
             backgroundColor: "#1A237E"
           }
         ]
-      }
+      },
+      labels: []
     };
   },
   mounted() {
-    axios
-      .get(this.endpoint)
-      .then(response =>
-        (this.chartdata.datasets[0].data = Array.from(
-          response.data.words,
-          w => w.value
-        ).slice(0, 20)).then(
-          (this.chartdata.labels = Array.from(
-            response.data.words,
-            w => w.name
-          ).slice(0, 20)).then((this.loaded = true))
-        )
+    axios.get(this.endpoint).then(response => {
+      this.chartdata.datasets[0].data = Array.from(
+        response.data.result,
+        w => w["ga:pageviews"]
       );
+      this.chartdata.labels = Array.from(
+        response.data.result,
+        w => w["ga:pageTitle"]
+      );
+      this.loaded = true;
+    });
   }
 };
 </script>
