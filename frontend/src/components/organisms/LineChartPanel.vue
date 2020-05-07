@@ -5,8 +5,12 @@
       <div class="cardtitle">Daily Access</div>
     </v-card-title>
     <line-chart v-if="loaded" :chartdata="chartdata" :width="1000"/>
+    <v-container :class="`d-flex justify-center mb-6`">
+      <v-progress-circular v-if="!loaded" indeterminate color="primary"></v-progress-circular>
+    </v-container>
   </v-card>
 </template>
+
 
 <script>
 import LineChart from "@/components/atoms/LineChart.vue";

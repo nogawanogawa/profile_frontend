@@ -2,6 +2,9 @@
   <v-card xs12 class="card">
     <v-card-title>Word Count</v-card-title>
     <BarChart v-if="loaded" :chartdata="chartdata"/>
+    <v-container :class="`d-flex justify-center mb-6`">
+      <v-progress-circular v-if="!loaded" indeterminate color="primary"></v-progress-circular>
+    </v-container>
   </v-card>
 </template>
 
