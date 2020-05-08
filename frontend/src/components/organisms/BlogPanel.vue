@@ -1,7 +1,7 @@
 <template>
   <v-card class="pa-2">
     <v-card-title class="title">
-      <v-icon>mdi-chart-bar</v-icon>
+      <v-icon>insert_drive_file</v-icon>
       <div class="cardtitle">最近の投稿</div>
     </v-card-title>
     <v-container>
@@ -31,11 +31,11 @@ import config from "@/config/params.js";
 export default {
   data: () => ({
     items: [],
-    endpoint: config.route + "hatena_com",
-    blog_url: config.hatena_com_url
+    endpoint: config.route
   }),
+  props: ["blog", "blog_url"],
   mounted: function() {
-    axios.get(this.endpoint).then(
+    axios.get(this.endpoint + this.blog).then(
       response =>
         (this.items = response.data.entry
           .sort(function(a, b) {

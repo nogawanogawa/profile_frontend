@@ -6,6 +6,14 @@
         <v-container fluid grid-list-lg pa-2>
           <v-row>
             <v-col cols="12" xs="12" sm="12" md="12">
+              <v-text class="headline">
+                <v-icon>{{icon}}</v-icon>
+                {{title}}
+              </v-text>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="12" xs="12" sm="12" md="12">
               <slot name="access"></slot>
             </v-col>
             <v-col cols="12" xs="12" sm="6" md="8">
@@ -28,7 +36,8 @@ import Sidebar from "@/components/organisms/Sidebar.vue";
 export default {
   components: {
     Sidebar
-  }
+  },
+  props: ["title", "icon"]
 };
 </script>
 
