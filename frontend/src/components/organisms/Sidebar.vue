@@ -45,7 +45,7 @@
             <v-icon>mdi-account</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Career</v-list-item-title>
+            <v-list-item-title>About Me</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item @click="twitter_analysis()" class="white--text">
