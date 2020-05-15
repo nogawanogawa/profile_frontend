@@ -2,7 +2,7 @@
   <v-card xs12 class="card">
     <v-card-title class="title">
       <v-icon>insert_chart_outlined</v-icon>
-      <div class="cardtitle">Daily Access</div>
+      <div class="cardtitle">Daily Access (last 30 days)</div>
     </v-card-title>
     <line-chart v-if="loaded" :chartdata="chartdata" :width="1000"/>
     <v-container :class="`d-flex justify-center mb-6`">

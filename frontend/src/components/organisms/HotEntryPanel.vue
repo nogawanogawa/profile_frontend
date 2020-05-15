@@ -2,7 +2,7 @@
   <v-card xs12 class="card">
     <v-card-title class="title">
       <v-icon>bar_chart</v-icon>
-      <div class="cardtitle">Hot Entry</div>
+      <div class="cardtitle">Hot Entry (access in the past 30 days)</div>
     </v-card-title>
     <BarChart v-if="loaded" :chartdata="chartdata"/>
     <v-container :class="`d-flex justify-center mb-6`">
