@@ -1,8 +1,8 @@
 <template>
   <v-card>
     <v-card-title class="title">
-      <v-icon large left>computer</v-icon>
-      <div class="cardtitle">AtCoder</div>
+      <v-icon large left>{{icon}}</v-icon>
+      <div class="cardtitle">{{title}}</div>
     </v-card-title>
     <AtcoderChart v-if="loaded" :chartdata="chartdata" :height="100" />
     <v-container :class="`d-flex justify-center mb-6`">
@@ -14,7 +14,6 @@
   </v-card>
 </template>
 
-
 <script>
 import AtcoderChart from "@/components/atoms/AtcoderChart.vue";
 import config from "@/config/params.js";
@@ -24,6 +23,7 @@ export default {
   components: {
     AtcoderChart,
   },
+  props: ["title", "icon"],
   name: "AtcoderChartContainer",
   data() {
     return {

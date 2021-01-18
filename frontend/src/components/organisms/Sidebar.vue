@@ -48,6 +48,14 @@
             <v-list-item-title>About Me</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item @click="atcoder_analysis()" class="white--text">
+          <v-list-item-action>
+            <v-icon>computer</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Atcoder</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item @click="twitter_analysis()" class="white--text">
           <v-list-item-action>
             <v-icon>mdi-twitter</v-icon>
@@ -99,6 +107,9 @@ export default {
     },
     carrer() {
       this.$router.push({ path: "/Career" });
+    },
+    atcoder_analysis() {
+      this.$router.push({ path: "/AtCoderAnalysis" });
     },
     twitter_analysis() {
       this.$router.push({ path: "/TwitterAnalysis" });
