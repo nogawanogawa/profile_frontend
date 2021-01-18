@@ -3,6 +3,9 @@
     <template v-slot:github>
       <GithubPanel/>
     </template>
+    <template v-slot:atcoder>
+      <AtcoderPanel/>
+    </template>
     <template v-slot:connpass>
       <ConnpassPanel/>
     </template>
@@ -19,6 +22,7 @@
 import HomeLayout from "@/components/templates/HomeLayout.vue";
 import TwitterPanel from "@/components/organisms/TwitterPanel.vue";
 import ConnpassPanel from "@/components/organisms/ConnpassPanel.vue";
+import AtcoderPanel from "@/components/organisms/AtcoderPanel.vue";
 import GithubPanel from "@/components/organisms/GithubPanel.vue";
 import HatenaPanel from "@/components/organisms/HatenaPanel.vue";
 
@@ -29,6 +33,7 @@ export default {
     TwitterPanel,
     ConnpassPanel,
     GithubPanel,
+    AtcoderPanel,
     HatenaPanel
   },
   props: {
