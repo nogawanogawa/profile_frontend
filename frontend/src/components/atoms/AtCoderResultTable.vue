@@ -5,6 +5,8 @@
       :headers="headers"
       :items="items"
       :items-per-page="10"
+      :sort-by="['date']"
+      :sort-desc="[true]"
       class="elevation-3"
     ></v-data-table>
   </div>
